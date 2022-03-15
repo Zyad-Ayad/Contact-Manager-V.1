@@ -477,5 +477,18 @@ void User::saveintofile(string filename)
 
 User::~User()
 {
-    //dtor
+    for(int i=0;i<addressesCount;i++)
+    {
+        delete addresses[i];
+    }
+
+    for(int i=0;i<phonesCount;i++)
+    {
+        delete phones[i];
+    }
+
+    for(int i=0;i<emailsCount;i++)
+    {
+        delete emails[i];
+    }
 }
